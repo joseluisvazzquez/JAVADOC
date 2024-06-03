@@ -24,6 +24,7 @@ public class mainn {
         Restaurant restWindow = new Restaurant();
         Menus menuWindow = new Menus();
         Chefs chefsWindow = new Chefs();
+        Platos platosWindow = new Platos();
         JFrame j = new JFrame();
         
         JPanel p = new JPanel();
@@ -31,10 +32,12 @@ public class mainn {
         JButton rest = new JButton("Restaurantes");
         JButton chefs = new JButton("Chefs");
         JButton menus = new JButton("Menus");
+        JButton platos = new JButton("Platos");
         
         p.add(rest);
         p.add(chefs);
         p.add(menus);
+        p.add(platos);
 
         j.add(p);
         j.setVisible(true);
@@ -70,6 +73,13 @@ public class mainn {
             @Override
             public void actionPerformed(ActionEvent e) {
                 menuWindow.tableConnection(true);
+            }
+
+        }));
+        platos.addActionListener((ActionListener) ((ActionListener) new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                platosWindow.tableConnection(true);
             }
         }));
     }
